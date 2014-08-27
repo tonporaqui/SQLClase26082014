@@ -154,4 +154,4 @@ sp_LeerClienteOutPut '1-9','',''
 declare @nom varchar(50),
 		@fechanac date
 		
-sp_LeerClienteOutPut'1-9',@nom output, @fechanac output
+exec sp_LeerClienteOutPut'1-9',@nom output, @fechanac output
