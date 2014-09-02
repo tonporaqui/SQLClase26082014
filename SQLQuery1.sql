@@ -133,8 +133,8 @@ sp_LeerCliente'5-8'
 sp_LeerCliente'0-0' /*error*/
 
 CREATE PROCEDURE sp_LeerClienteOutPut	@rut char(12), 
-										@nombre varchar(50) output, 
-										@fechanacimiento date output
+					@nombre varchar(50) output, 
+					@fechanacimiento date output
 as
 begin
 	select @nombre=nombres, 
@@ -164,13 +164,13 @@ exec sp_LeerClienteOutPut'1-9',@nom output, @fechanac output
 CREATE PROCEDURE Sp_excisteCliente @rut varchar(12)
 AS
 BEGIN
-	declare @cont as int
-	select @cont=COUNT(*) from CLIENTE
-	where rut = @rut
+	DECLARE @cont AS INT
+	SELECT @cont=COUNT(*) FROM CLIENTE
+	WHERE rut = @rut
 	IF @cont>0
 	BEGIN
-		print 'EXISTE CLIENTE'
-		return
+		PRINT 'EXISTE CLIENTE'
+		RETURN
 	END
 	ELSE
 	BEGIN
@@ -179,4 +179,4 @@ BEGIN
 	END
 END
 
-Sp_excisteCliente'29';
+Sp_excisteCliente'1-9';
