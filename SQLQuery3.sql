@@ -1,6 +1,6 @@
 USE ejemplo;
 
-ALTER PROCEDURE SP_INSERTCLIENTE @rut varchar(12),
+CREATE PROCEDURE SP_INSERTCLIENTE @rut varchar(12),
 								 @nom varchar(50),
 								 @fechnacimiento date
 AS
