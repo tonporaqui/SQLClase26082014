@@ -1,8 +1,8 @@
 USE ejemplo;
 
 CREATE PROCEDURE SP_INSERTCLIENTE @rut varchar(12),
-								 @nom varchar(50),
-								 @fechnacimiento date
+				  @nom varchar(50),
+				  @fechnacimiento date
 AS
 BEGIN
 BEGIN TRY
