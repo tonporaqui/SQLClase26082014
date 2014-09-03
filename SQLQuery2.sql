@@ -7,8 +7,8 @@ CREATE TABLE PRODUCTO(
 )
 
 CREATE PROCEDURE Sp_insertarProductos @codpro int,
-								  @nompro varchar(100),
-								  @precioneto numeric(12)
+				      @nompro varchar(100),
+				      @precioneto numeric(12)
 AS
 BEGIN
 	INSERT INTO PRODUCTO(CODIGOPRODUCTO,NOMBREPRODUCTO,PRECIONETO)	
@@ -22,8 +22,8 @@ exec Sp_insertarProductos 2,'PUERTAS',200
 exec Sp_insertarProductos 3,'TEJAS',350
 
 CREATE PROCEDURE SP_ActualizaProducto @codpro int,
-									  @nompro varchar(100),
-									  @precioneto numeric(12)
+				      @nompro varchar(100),
+				      @precioneto numeric(12)
 AS
 BEGIN
 	UPDATE PRODUCTO
