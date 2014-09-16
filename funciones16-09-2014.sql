@@ -29,3 +29,6 @@ begin
 end
 
 select dbo.CalculaIVA(500)
+
+Select CodProducto,nombreproducto,precio,dbo.CalculaIva(precio) as iva from producto
+
