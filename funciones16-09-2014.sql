@@ -17,6 +17,9 @@ create table ventaslv(
 	Valorventa float
 )
 
+alter table ventaslv
+alter column fecha date
+
 select * from producto
 
 create function CalculaIVA(@cantidad money)
@@ -32,3 +35,17 @@ select dbo.CalculaIVA(500)
 
 Select CodProducto,nombreproducto,precio,dbo.CalculaIva(precio) as iva from producto
 
+insert into ventaslv values (1,'20140916',dbo.CalculaIVA(500))
+
+select * from ventaslv
+
+
+create table iva(
+	ValorIva float,
+	IndVigencia varchar(1)
+)
+
+insert into iva values (0.18,'c')
+insert into iva values (0.19,'v')
+
+select * from iva
